@@ -67,7 +67,7 @@ driver:
       port: 22
       username: root
       # use either password or key
-      password: "VMware1!"
+      password: "!"
       privateKey: |
         -----BEGIN RSA PRIVATE KEY-----
         ...
@@ -92,10 +92,10 @@ driver:
       #  "org.freenas:test": "{{ parameters.foo }}"
       #  "org.freenas:test2": "some value"
     
-      datasetParentName: /mnt/a01-hdd-01/k8s/nfs
+      datasetParentName: a01-hdd-01/k8s/nfs/vols
       # do NOT make datasetParentName and detachedSnapshotsDatasetParentName overlap
       # they may be siblings, but neither should be nested in the other
-      detachedSnapshotsDatasetParentName: /mnt/a01-hdd-01/k8s/nfs/snaps
+      detachedSnapshotsDatasetParentName: a01-hdd-01/k8s/nfs/snaps
       datasetEnableQuotas: true
       datasetEnableReservation: false
       datasetPermissionsMode: "0777"
